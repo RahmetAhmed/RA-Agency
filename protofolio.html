@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahmet Marketing Agency</title>
+
+  <!-- Icon -->
+  <link rel="icon" href="images/microchip-solid.svg" type="image/svg+xml">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/darkMode.css">
+  <link rel="stylesheet" href="css/singlePage.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap">
+
+  <!-- Custom Inline Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      z-index: 999;
+    }
+
+    .sticked-header-offset {
+      padding-top: 100px; /* Adjust depending on navbar height */
+    }
+
+    .protofolio {
+      padding: 40px 20px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      background-color: rgb(221, 119, 2);
+      color: white;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover,
+    .buttons button.active {
+      background-color: rgb(173, 94, 2);
+    }
+
+    .photos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .photo {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .photo:hover {
+      transform: scale(1.02);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .photo-info {
+      padding: 15px;
+    }
+
+    .photo-info h5 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .photo-info p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000;
+    }
+
+    .btn a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn a:hover {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="d-flex align-items-center fixed-top justify-content-around bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg w-100">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Technoit" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-sliders"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="protofolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projectdetail.html">Product detail</a>
+            </li>
+        
+              <!-- Contact Us Button -->
+<button type="button" class="btn gold-btn rounded-pill get-quotes">
+  <a href="contact.html" class="text-white text-decoration-none">Contact us</a>
+</button>
+
+<!-- Dark Mode Button -->
+<button id="darkmode-button" class="btn gold-btn rounded-circle">
+  <i class="fa-solid fa-moon"></i>
+</button>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs sticked-header-offset">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-up" data-aos-delay="300">Our Portfolio</h2>
+            <p data-aos="fade-up" data-aos-delay="400">Explore our diverse portfolio showcasing our expertise in digital marketing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb" data-aos="fade-up" data-aos-delay="700">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Our Portfolio</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div class="protofolio" id="protofolio">
+    <div class="container">
+      <div class="buttons">
+       <button type="button" data-cat="all" class="btn btn-primary rounded-5 rounded-end active">All</button>
+        <button type="button" data-cat="app-des">Social Media Marketing</button>
+        <button type="button" data-cat="app-dev">Video Editing</button>
+        <button type="button" data-cat="brand">Graphics Design</button>
+        <button type="button" data-cat="ads">Paid Advertising</button>
+        <button type="button" data-cat="consult">Consulting & Social Media Management</button>
+      </div>
+<!-- social media -->
+    <style>
+      .photo.app-des {
+        width: 280px;
+        height: 320px;
+        margin: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+      }
+
+      .photo.app-des:hover {
+        transform: translateY(-5px);
+      }
+
+      .photo.app-des img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-info {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .photo-info h5 {
+        margin: 10px 0 5px;
+        font-size: 16px;
+      }
+
+      .photo-info p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+      <div class="photos">
+        <div class="photo all app-des">
+          <img src="images/a.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Instagram Campaign</h4>
+            <p>Weekly posts to increase followers by 35%.</p>
+          </div>
+        </div>
+        <div class="photo all app-des">
+          <img src="images/ssss.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Story Highlights</h4>
+            <p>Designed story covers for cohesive branding.</p>
+          </div>
+        </div>
+        <div class="photo all app-des">
+          <img src="images/sssss.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Story Highlights</h4>
+            <p>Created cohesive and visually appealing story cover icons</p>
+          </div>
+        </div>
+        <div class="photo all app-des">
+          <img src="images/ssv.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Story Highlights</h4>
+            <p>Developed custom story highlight designs to organize conten</p>
+          </div>
+        </div>
+        <!---end social-->
+<!---Graphic design--->
+   <style>
+     .photo.brand {
+       width: 280px;
+       height: 320px;
+       margin: 15px;
+       border: 1px solid #ddd;
+       border-radius: 10px;
+       overflow: hidden;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       transition: transform 0.3s ease;
+       display: inline-block;
+       vertical-align: top;
+       background-color: #fff;
+     }
+
+     .photo.brand:hover {
+       transform: translateY(-5px);
+     }
+
+     .photo.brand img {
+       width: 100%;
+       height: 200px;
+       object-fit: cover;
+       display: block;
+     }
+
+     .photo-info {
+       padding: 10px;
+       text-align: center;
+     }
+
+     .photo-info h5 {
+       margin: 10px 0 5px;
+       font-size: 16px;
+     }
+
+     .photo-info p {
+       margin: 0;
+       font-size: 14px;
+       color: #555;
+     }
+   </style>
+        <div class="photo all brand">
+          <img src="images/gr.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302;">Art Meets Purpose </h5>
+            <p>Transformed ideas into engaging visuals for both print and digital formats</p>
+          </div>
+        </div>
+         <div class="photo all brand">
+          <img src="images/gra.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302; ">Visual Branding & Design</h5>
+            <p>Crafted compelling visuals including logos, marketing materials.</p>
+          </div>
+        </div>
+         <div class="photo all brand">
+          <img src="images/graphics.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302;"> Design That Speaks</h5>
+            <p>Developed professional and visually striking designs tailored to communicate.</p>
+          </div>
+        </div>
+         <div class="photo all brand">
+          <img src="images/food.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302;">Logo Design</h5>
+            <p>Minimalist logo for tech startup brand.</p>
+          </div>
+        </div>
+       
+        <!---end graphic  --->
+<!---Paid Advertising--->
+       <style>
+  .photo.ads {
+    width: 280px;
+    height: 320px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+  }
+
+  .photo.ads:hover {
+    transform: translateY(-5px);
+  }
+
+  .photo.ads img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-info {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .photo-info h5 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+
+  .photo-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+
+<div class="photo all ads">
+  <img src="images/vv.jpg" alt="">
+  <div class="photo-info">
+    <h5>Facebook Ad Campaign</h5>
+    <p>Reached over 15k users in 2 weeks.</p>
+  </div>
+</div>
+
+<div class="photo all ads">
+  <img src="images/fad.jpg" alt="">
+  <div class="photo-info">
+    <h5>Facebook Ad Campaign</h5>
+    <p>Reached over 15k users in 2 weeks.</p>
+  </div>
+</div>
+
+<div class="photo all ads">
+  <img src="images/d.jpg" alt="">
+  <div class="photo-info">
+    <h5>Instagram Ad Campaign</h5>
+    <p>Reached over 25k users in 2 weeks.</p>
+  </div>
+</div>
+
+<div class="photo all ads">
+  <img src="images/fas.jpg" alt="">
+  <div class="photo-info">
+    <h5>Instagram Ad Campaign</h5>
+    <p>Reached over 15k users in 2 weeks.</p>
+  </div>
+</div>
+
+<!--end of paid-->
+
+<!-- video editing  -->
+   <style>
+.photo.app-dev {
+    width: 280px;
+    height: 320px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+  }
+
+  .photo.app-dev:hover {
+    transform: translateY(-5px);
+  }
+
+  .photo.app-dev img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-info {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .photo-info h5 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+
+  .photo-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+   
+
+<div class="photo all app-dev">
+          <img src="images/veddd.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302;">Creative Video Crafting</h5>
+            <p>Edited YouTube ads with effects and transitions.</p>
+          </div>
+        </div>
+        <div class="photo all app-dev">
+          <img src="images/v.jpg" alt="">
+          <div class="photo-info">
+            <h5 style="color: #dda302;">Visual Storytelling Mastery</h5>
+            <p>Transformed raw footage into compelling video.</p>
+          </div>
+        </div>
+          <div class="photo all app-dev">
+          <img src="images/ved.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Frame-by-Frame Excellence</h4>
+            <p>Designed story covers for cohesive branding.</p>
+          </div>
+        </div>
+            <div class="photo all app-dev">
+          <img src="images/vedd.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Impactful Edits That Speak</h4>
+            <p>Designed story covers for cohesive branding.</p>
+          </div>
+        </div>
+<!-- end video editing  -->
+        
+<!-- consult  -->
+
+   <style>
+     .photo.consult {
+       width: 280px;
+       height: 320px;
+       margin: 15px;
+       border: 1px solid #ddd;
+       border-radius: 10px;
+       overflow: hidden;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+       transition: transform 0.3s ease;
+       display: inline-block;
+       vertical-align: top;
+       background-color: #fff;
+     }
+
+     .photo.consult:hover {
+       transform: translateY(-5px);
+     }
+
+     .photo.consult img {
+       width: 100%;
+       height: 200px;
+       object-fit: cover;
+       display: block;
+     }
+
+     .photo-info {
+       padding: 10px;
+       text-align: center;
+     }
+
+     .photo-info h5 {
+       margin: 10px 0 5px;
+       font-size: 16px;
+     }
+
+     .photo-info p {
+       margin: 0;
+       font-size: 14px;
+       color: #555;
+     }
+   </style>
+    <div class="photo all consult">
+          <img src="images/soc.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Digital Growth Strategy</h4>
+            <p>Guided businesses with tailored consulting and hands-on social media management.</p>
+          </div>
+        </div>
+         <div class="photo all consult">
+          <img src="images/social.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Strategic Social Solutions</h4>
+            <p>Provided expert advice and full-scale management of social media.</p>
+          </div>
+        </div>
+         <div class="photo all consult">
+          <img src="images/co.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Brand-Driven Consulting</h4>
+            <p>Designed story covers for cohesive branding.</p>
+          </div>
+        </div>
+           <div class="photo all consult">
+          <img src="images/cons.jpg" alt="">
+          <div class="photo-info">
+            <h4 style="color: #dda302;">Smarter Social Management</h4>
+            <p>Implemented data-driven strategies to enhance social media presence and engagement.</p>
+          </div>
+        </div>
+    </div>
+     </div>
+      </div>
+ 
+       
+  <!-- End consolt Section -->
+  <!-- Footer -->
+  <footer id="footer" class="footer-section mt-5">
+    <div class="container">
+      <div class="footer-content pt-4 pb-4">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-4">
+            <div class="footer-widget">
+              <h6 class="quick-links-title">Quick Links</h6>
+              <ul class="list">
+                <li><a href="protofolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="footer-copy">© 2025 All Rights Reserved - Designed by 
+              <a href="http://www.rahmet.great-site.net/">Rahmet Ahmed</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Portfolio Filter Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.buttons button');
+    const photos = document.querySelectorAll('.photo');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add 'active' class to clicked button
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-cat');
+
+        photos.forEach(photo => {
+          // Show all if category is 'all'
+          if (category === 'all') {
+            photo.classList.remove('hidden');
+          } else {
+            // Show or hide based on matching category
+            if (photo.classList.contains(category)) {
+              photo.classList.remove('hidden');
+            } else {
+              photo.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
+
+</body>
+
+</html>
